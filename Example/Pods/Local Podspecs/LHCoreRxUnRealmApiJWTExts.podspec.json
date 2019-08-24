@@ -1,0 +1,52 @@
+{
+  "name": "LHCoreRxUnRealmApiJWTExts",
+  "version": "1.0",
+  "summary": "ListViewModel using with RxRealm, JWT for API, and Unrealm",
+  "swift_versions": "5.0",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/laohac8x/LHCoreRxUnRealmApiJWTExts",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dat Ng": "laohac83x@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/laohac8x/LHCoreRxUnRealmApiJWTExts.git",
+    "tag": "1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": [
+    "Pod/Classes/*.swift",
+    "LHCoreRxApiJWTExts/Source/*.swift",
+    "LHCoreRxApiJWTExts/LHSwiftJWT/Source/*.swift"
+  ],
+  "frameworks": "Foundation",
+  "dependencies": {
+    "SwiftyJSON": [
+      "~> 5"
+    ],
+    "Alamofire": [
+      "~> 4"
+    ],
+    "AlamofireImage": [
+      "~> 3"
+    ],
+    "RxCocoa": [
+      "~> 5"
+    ],
+    "RxSwift": [
+      "~> 5"
+    ],
+    "RealmSwift": [
+      "3.15.0"
+    ],
+    "Unrealm": [
+      "0.1.0"
+    ]
+  },
+  "swift_version": "5.0"
+}

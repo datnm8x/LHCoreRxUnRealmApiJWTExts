@@ -1,0 +1,26 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+use_frameworks!
+
+def common
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  pod 'RealmSwift', '~> 3.15.0'
+  pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'Unrealm'
+end
+
+target 'LHCoreRxUnRealmApiJWTExts_Example' do
+  platform :ios, '9.0'
+  common
+  pod 'LHCoreRxUnRealmApiJWTExts', :path => '../'
+end
+
+target 'LHCoreRxUnRealmApiJWTExts_Tests' do
+  platform :ios, '9.0'
+  common
+  pod 'RxBlocking', '~> 5.0'
+  pod 'LHCoreRxUnRealmApiJWTExts', :path => '../'
+end

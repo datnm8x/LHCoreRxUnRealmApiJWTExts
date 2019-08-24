@@ -1,0 +1,6 @@
+framework module LHCoreRxUnRealmApiJWTExts {
+  umbrella header "LHCoreRxUnRealmApiJWTExts-umbrella.h"
+
+  export *
+  module * { export * }
+}
