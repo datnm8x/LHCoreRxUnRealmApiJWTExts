@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Unrealm
 import SwiftyJSON
 import RxSwift
 import RxCocoa
@@ -62,7 +63,7 @@ public enum ObjectPrimaryKey {
 
 // type: for model with many categories, you can filter than easier
 public protocol LHCoreRxRealmFindItemByPrimaryKey {
-    associatedtype T: LHCoreRealmable
+    associatedtype T: Realmable
     static func findItemByPrimaryKey(_ primaryKey: ObjectPrimaryKey, modelOption: Int) -> Observable<LHCoreDetailModel.StateResult<T>>
     static func fetchWithPrimaryKey(_ itemPrimaryKey: ObjectPrimaryKey, modelOption: Int) -> Observable<T>
 }
@@ -204,7 +205,7 @@ open class LHCoreRxRealmDetailViewModel<T: LHCoreRxRealmFindItemByPrimaryKey> {
     }
 }
 
-public extension LHCoreRxRealmFindItemByPrimaryKey where Self: Object {
+public extension LHCoreRxRealmFindItemByPrimaryKey where Self: Realmable {
     static func findItemByPrimaryKey(_ primaryKey: ObjectPrimaryKey, modelOption: Int) -> Observable<LHCoreDetailModel.StateResult<Self>> {
         return Observable.create({ (observable: AnyObserver<LHCoreDetailModel.StateResult<Self>>) -> Disposable in
             // Get Local data
